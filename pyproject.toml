@@ -1,0 +1,26 @@
+[project]
+name = "toolset"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Yan Zhu",email = "zhuyan79@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.4"
+dependencies = [
+    "pypdf (>=6.1.1,<7.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "toolset", from = "src"}]
+include = ["toolset/data/*"]
+
+[tool.poetry.scripts]
+watermark = "toolset.make_watermark:main"
+
+[tool.poetry.dependencies]
+python = ">=3.11"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
