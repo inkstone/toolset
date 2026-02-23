@@ -17,6 +17,7 @@ include = ["toolset/data/*"]
 
 [tool.poetry.scripts]
 watermark = "toolset.make_watermark:main"
+bookmark = "toolset.add_bookmark:main"
 
 [tool.poetry.dependencies]
 python = ">=3.11"
